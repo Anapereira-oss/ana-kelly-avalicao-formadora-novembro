@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulário de Cadastro☪️</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="assets/img/undraw_shopping_re_hdd9.svg" alt="Ilustração de compras">
+        </div>
+        <div class="form">
+            <form id="formCadastro" action="index2.html" method="post">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Bem vindo ao seu Cadastro☪️</h1>
+                    </div>
+                </div>
+                <div class="input-group">
+                   
+                    <div class="input-box">
+                        <label for="name">Nome</label>
+                        <input id="name" type="text" name="name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="nomematerno">Nome Materno</label>
+                        <input id="nomematerno" type="text" name="nomematerno" placeholder="Digite o seu nome materno" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="data">Data de Nascimento</label>
+                        <input id="data" type="date" name="data" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="celular">Celular</label>
+                        <input id="celular" type="tel" name="celular" placeholder="+55 (00) 00000-0000" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="telefonefixo">Telefone Fixo</label>
+                        <input id="telefonefixo" type="tel" name="telefonefixo" placeholder="+xx (xx) xxxx-xxxx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" type="text" name="cpf" placeholder="xxx.xxx.xxx-xx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="enderecoCompleto">Endereço Completo</label>
+                        <input 
+                            id="enderecoCompleto" 
+                            type="text" 
+                            name="enderecoCompleto" 
+                            placeholder="Ex: Rua das Flores, 123" 
+                            pattern="^(Rua|Avenida|Travessa|Av\.)\s+.{10,}$" 
+                            title="O endereço deve começar com 'Rua', 'Avenida', 'Travessa' ou 'Av.', seguido por pelo menos 10 caracteres." 
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <label for="login">Login</label>
+                        <input id="login" type="text" name="login" placeholder="Digite seu login" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="confirmpassword">Confirme sua Senha</label>
+                        <input id="confirmpassword" type="password" name="confirmpassword" placeholder="Digite sua senha novamente" required>
+                    </div>
+                </div>
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h2>Gênero</h2>
+                    </div>
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            <label for="female">Feminino</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Masculino</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="others" name="gender" value="others" required>
+                            <label for="others">Outros</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="none" name="gender" value="none" required>
+                            <label for="none">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="reset">Limpar</button>
+                    <button type="submit" id="enviarBtn">Enviar</button>
+                </div>
+            </form>
+            <dialog id="customDialog">
+                <p id="dialogMessage"></p>
+                <button class="dialog-close" id="closeDialog">Fechar</button>
+            </dialog>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
